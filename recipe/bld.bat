@@ -6,6 +6,9 @@ if errorlevel 1 exit 1
 nmake -e -f %RECIPE_DIR%\Makefile.msvc.x64.in
 if errorlevel 1 exit 1
 
+type "%PREFIX%\etc\mecabrc"
+if errorlevel 1 exit 1
+
 cp mecab.h "%LIBRARY_INC%"
 if errorlevel 1 exit 1
 
