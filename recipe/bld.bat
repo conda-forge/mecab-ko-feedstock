@@ -9,23 +9,26 @@ if errorlevel 1 exit 1
 nmake -e -f %RECIPE_DIR%\Makefile.msvc.x64.in
 if errorlevel 1 exit 1
 
+Echo On
+
 (
 echo ;
 echo ; Configuration file of MeCab
 echo ;
 echo ; $Id: mecabrc.in,v 1.3 2006/05/29 15:36:08 taku-ku Exp $;
 echo ;
-echo dicdir =  "%LIBRARY_PREFIX%\lib\mecab\dic\mecab-ko-dic
-echo 
+echo dicdir =  %LIBRARY_PREFIX%\lib\mecab\dic\mecab-ko-dic
+echo:
 echo ; userdic = /home/foo/bar/user.dic
-echo 
+echo:
 echo ; output-format-type = wakati
 echo ; input-buffer-size = 8192
-echo 
+echo:
 echo ; node-format = %m\n
 echo ; bos-format = %S\n
 echo ; eos-format = EOS\n
 )>%PREFIX%\etc\mecabrc
+Echo Off
 if errorlevel 1 exit 1
 
 type "%PREFIX%\etc\mecabrc"
