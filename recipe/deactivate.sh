@@ -1,1 +1,3 @@
 unset MECABRC
+unset MECAB_PATH
+unset MECAB_CHARSET

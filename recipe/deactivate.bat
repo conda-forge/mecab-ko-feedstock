@@ -1,1 +1,3 @@
 set MECABRC=
+set MECAB_PATH=
+set MECAB_CHARSET=
